@@ -1,3 +1,4 @@
+import { useScreenHeight } from "hooks/useScreenHeight";
 import { ReactNode } from "react";
 import { styled } from "styled-components";
 
@@ -8,11 +9,20 @@ function Wrapper({
   heightTimes?: number;
   children: ReactNode;
 }) {
-  return <Container $heightTimes={heightTimes}>{children}</Container>;
+  const screenHeight = useScreenHeight();
+
+  return (
+    <Container $screenHeight={screenHeight} $heightTimes={heightTimes}>
+      {children}
+    </Container>
+  );
 }
 
-const Container = styled.section<{ $heightTimes: number }>`
-  height: ${(props) => window.innerHeight * props.$heightTimes}px;
+const Container = styled.section<{
+  $screenHeight: number;
+  $heightTimes: number;
+}>`
+  height: ${(props) => props.$screenHeight * props.$heightTimes}px;
   min-height: 300px;
   box-sizing: border-box;
   display: flex;

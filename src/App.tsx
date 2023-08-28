@@ -14,7 +14,7 @@ function App() {
 
 const Bg = styled.canvas`
   width: 100%;
-  height: ${window.innerHeight}px;
+  height: 100%;
   background-color: orange;
   position: fixed;
   top: 0;
