@@ -1,5 +1,8 @@
 import Main from "pages/Main";
+import About from "pages/About";
+import Blog from "pages/Blog";
 import { styled } from "styled-components";
+import Footer from "components/footer/Footer";
 
 function App() {
   return (
@@ -7,6 +10,9 @@ function App() {
       <Bg />
       <Wrapper>
         <Main />
+        <About />
+        <Blog />
+        <Footer />
       </Wrapper>
     </>
   );
