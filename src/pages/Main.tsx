@@ -9,17 +9,28 @@ function Main() {
   return (
     <Wrapper heightTimes={1.5}>
       <Sticky heightTimes={1.5}>
-        <Title>{NAME}</Title>
-        <Title>@{GITHUB_ID}</Title>
+        <Container>
+          <Title>{NAME}</Title>
+          {/* <Title>{GITHUB_ID}</Title> */}
+        </Container>
       </Sticky>
     </Wrapper>
   );
 }
 
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Title = styled.h1`
   width: 100%;
   height: 50px;
-  line-height: 50px;
+  line-height: 3rem;
   text-align: center;
   font-size: 3rem;
 `;
