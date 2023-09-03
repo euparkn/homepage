@@ -21,7 +21,7 @@ function App() {
 const Bg = styled.canvas`
   width: 100%;
   height: 100%;
-  background-color: orange;
+  background-color: #eee;
   position: fixed;
   top: 0;
   left: 0;
