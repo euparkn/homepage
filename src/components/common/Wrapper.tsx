@@ -26,10 +26,10 @@ const Container = styled.section<{
   min-height: 300px;
   box-sizing: border-box;
   display: flex;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border-left: 2px double #aaa;
+  border-right: 2px double #aaa;
   padding: 0 32px;
-  margin: 0 12px 300px;
+  margin: 0 12px 500px;
 `;
 
 export default Wrapper;

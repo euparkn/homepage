@@ -5,8 +5,9 @@ import { styled } from "styled-components";
 import { PostDataDTO } from "types/type";
 import { getPostList } from "api/api";
 
-import Figure from "components/blog/Figure";
 import { useState } from "react";
+import Post from "components/blog/Post";
+import { SectionLink, SectionTitle } from "assets/styles/common";
 
 function BlogList() {
   const [searchOption] = useState({ page: "1", count: "5" });
@@ -33,13 +34,32 @@ function BlogList() {
   const { posts } = data;
 
   return (
-    <List>
-      {posts.map((post) => (
-        <Figure key={post.id} info={post} />
-      ))}
-    </List>
+    <Container>
+      <TitleWrapper>
+        <SectionTitle>Post</SectionTitle>
+        <SectionLink href={data.url} target="_blank">
+          more...
+        </SectionLink>
+      </TitleWrapper>
+      <List>
+        {posts.map((post) => (
+          <Post key={post.id} info={post} />
+        ))}
+      </List>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const TitleWrapper = styled.div``;
 
 const List = styled.div``;
 
