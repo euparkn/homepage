@@ -1,13 +1,16 @@
-import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 
+import { AxiosError } from "axios";
+import { useQuery } from "@tanstack/react-query";
 import { styled } from "styled-components";
 
 import { PostDataDTO } from "types/type";
 import { getPostList } from "api/api";
 
-import { useState } from "react";
+import Loading from "components/common/Loading";
+import Error from "components/common/Error";
 import Post from "components/blog/Post";
-import { SectionLink, SectionTitle } from "assets/styles/common";
+import PostTitle from "components/blog/PostTitle";
 
 function BlogList() {
   const [searchOption] = useState({ page: "1", count: "5" });
@@ -19,33 +22,32 @@ function BlogList() {
   } = useQuery<PostDataDTO>({
     queryKey: ["getPostList", searchOption],
     queryFn: () => getPostList(searchOption),
+    retry: 0,
   });
 
   const data = originData?.tistory.item;
+  const err = error as AxiosError;
 
   if (isLoading) {
-    return <div>loading</div>;
+    return <Loading />;
   }
 
   if (!data || error) {
-    return <div>error</div>;
+    return (
+      <Error code={err.response?.status} text={err.response?.statusText} />
+    );
   }
 
   const { posts } = data;
 
   return (
     <Container>
-      <TitleWrapper>
-        <SectionTitle>Post</SectionTitle>
-        <SectionLink href={data.url} target="_blank">
-          more...
-        </SectionLink>
-      </TitleWrapper>
-      <List>
+      <PostTitle />
+      <ul>
         {posts.map((post) => (
           <Post key={post.id} info={post} />
         ))}
-      </List>
+      </ul>
     </Container>
   );
 }
@@ -58,9 +60,5 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `;
-
-const TitleWrapper = styled.div``;
-
-const List = styled.div``;
 
 export default BlogList;
