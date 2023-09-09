@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-display: block;
+  src: local("Montserrat Regular"), url("./Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-display: block;
+  src: local("Montserrat Bold"), url("./Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-display: block;
+  src: local("Montserrat ExtraBold"), url("./Montserrat-ExtraBold.ttf");
+}
+
+/* KR */
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-display: block;
+  src: local("Noto Sans KR Regular"), url("./NotoSansKR-Regular.ttf");
+  unicode-range: U+AC00-D7A3;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  font-display: block;
+  src: local("Noto Sans KR Bold"), url("./NotoSansKR-Bold.ttf");
+  unicode-range: U+AC00-D7A3;
+}

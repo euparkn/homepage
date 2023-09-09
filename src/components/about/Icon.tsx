@@ -39,7 +39,6 @@ const Box = styled.div<{ $color: string; $textColor: string }>`
     transition: 0.2s;
     border-radius: 1px;
     margin-right: 8px;
-    padding-top: 2px;
     display: none;
   }
   &:hover {

@@ -1,6 +1,10 @@
 import { styled } from "styled-components";
 
-import { SectionLink, SectionText, SectionTitle } from "assets/styles/common";
+import {
+  SectionLink,
+  SectionText,
+  SectionTitle,
+} from "components/common/common";
 
 import { ReactComponent as GmailIcon } from "assets/icons/gmail-#EA4335.svg";
 import { ReactComponent as GithubIcon } from "assets/icons/github-#181717.svg";

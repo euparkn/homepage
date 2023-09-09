@@ -1,4 +1,4 @@
-import { SectionLink, SectionTitle } from "assets/styles/common";
+import { SectionLink, SectionTitle } from "components/common/common";
 
 const BLOG_URL = process.env.REACT_APP_BLOG_URL;
 
