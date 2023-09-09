@@ -1,15 +1,15 @@
-import BlogList from "components/blog/List";
+import PostList from "components/blog/PostList";
 import Sticky from "components/common/Sticky";
 import Wrapper from "components/common/Wrapper";
 
-function Blog() {
+function PostContent() {
   return (
     <Wrapper heightTimes={1.5}>
       <Sticky height={30} heightTimes={1.5}>
-        <BlogList />
+        <PostList />
       </Sticky>
     </Wrapper>
   );
 }
 
-export default Blog;
+export default PostContent;

@@ -5,7 +5,7 @@ import { styled } from "styled-components";
 const GITHUB_ID = process.env.REACT_APP_GITHUB_ID;
 const NAME = process.env.REACT_APP_NAME;
 
-function Main() {
+function MainContent() {
   return (
     <Wrapper heightTimes={1.5}>
       <Sticky heightTimes={1.5}>
@@ -35,4 +35,4 @@ const Title = styled.h1`
   font-size: 3rem;
 `;
 
-export default Main;
+export default MainContent;

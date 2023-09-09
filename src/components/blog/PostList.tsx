@@ -12,7 +12,7 @@ import Error from "components/common/Error";
 import Post from "components/blog/Post";
 import PostTitle from "components/blog/PostTitle";
 
-function BlogList() {
+function PostList() {
   const [searchOption] = useState({ page: "1", count: "5" });
 
   const {
@@ -61,4 +61,4 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-export default BlogList;
+export default PostList;

@@ -4,7 +4,7 @@ import Wrapper from "components/common/Wrapper";
 import AboutStack from "components/about/AboutStack";
 import AboutInfo from "components/about/AboutInfo";
 
-function About() {
+function AboutContent() {
   return (
     <Wrapper heightTimes={1.5}>
       <Sticky height={30} heightTimes={1.5}>
@@ -17,4 +17,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutContent;

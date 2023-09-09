@@ -1,7 +1,8 @@
-import Main from "pages/Main";
-import About from "pages/About";
-import Blog from "pages/Blog";
 import { styled } from "styled-components";
+
+import MainContent from "pages/MainContent";
+import AboutContent from "pages/AboutContent";
+import PostContent from "pages/PostContent";
 import Footer from "components/footer/Footer";
 
 function App() {
@@ -9,9 +10,9 @@ function App() {
     <>
       <Bg />
       <Wrapper>
-        <Main />
-        <About />
-        <Blog />
+        <MainContent />
+        <AboutContent />
+        <PostContent />
         <Footer />
       </Wrapper>
     </>
