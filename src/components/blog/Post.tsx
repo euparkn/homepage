@@ -25,14 +25,17 @@ const Link = styled.a`
   width: 100%;
   display: block;
   padding: 12px 0;
-  color: #111;
   font-size: 1rem;
+  color: #111;
   line-height: 1.25rem;
-  font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  box-sizing: border-box;
+  &:hover {
+    border-width: 2px;
+  }
 `;
 
 const Date = styled.span`
@@ -40,7 +43,6 @@ const Date = styled.span`
   font-size: 0.85rem;
   line-height: 1.25rem;
   color: #777;
-  font-weight: 500;
 `;
 
 export default Post;

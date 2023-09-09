@@ -1,6 +1,7 @@
-import { useScreenHeight } from "hooks/useScreenHeight";
 import { ReactNode } from "react";
 import { styled } from "styled-components";
+
+import { useScreenHeight } from "hooks/useScreenHeight";
 
 function Wrapper({
   heightTimes = 1,
@@ -29,7 +30,7 @@ const Container = styled.section<{
   border-left: 2px double #aaa;
   border-right: 2px double #aaa;
   padding: 0 32px;
-  margin: 0 12px 500px;
+  margin: 0 12px 400px;
 `;
 
 export default Wrapper;

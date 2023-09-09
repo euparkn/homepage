@@ -4,6 +4,7 @@ export const SectionTitle = styled.h3`
   font-size: 1.5rem;
   line-height: 1.75rem;
   font-weight: 700;
+  margin-bottom: 0.25rem;
 `;
 
 export const SectionText = styled.p`
@@ -14,7 +15,7 @@ export const SectionText = styled.p`
 
 export const SectionLink = styled.a`
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   padding-right: 8px;
   color: #111;
   text-decoration: none;
