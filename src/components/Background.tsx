@@ -36,7 +36,6 @@ function Background() {
 const Bg = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #eee;
   position: fixed;
   top: 0;
   left: 0;
@@ -51,7 +50,7 @@ const Bg = styled.div`
     transform: scale(125%);
     &:first-child {
       path {
-        stroke: #e5e5e5;
+        stroke: #eee;
         stroke-width: 42px;
       }
     }
