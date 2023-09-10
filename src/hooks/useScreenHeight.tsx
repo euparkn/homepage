@@ -1,19 +1,10 @@
 import { useEffect, useState } from "react";
+import { debounce } from "utils/debounce";
 
 export const useScreenHeight = () => {
   const [screenHeight, setScreenHeight] = useState<number>(
     () => window.innerHeight
   );
-
-  const debounce = (callback: () => void) => {
-    let val: ReturnType<typeof setTimeout>;
-    return () => {
-      clearTimeout(val);
-      val = setTimeout(() => {
-        callback();
-      }, 500);
-    };
-  };
 
   const resize = () => {
     setScreenHeight(window.innerHeight);

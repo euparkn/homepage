@@ -16,10 +16,10 @@ const Spinner = styled.div`
     width: 42px;
     height: 42px;
     border: 6px solid #111;
-    border-bottom-color: transparent;
+    border-right-color: transparent;
     border-radius: 50%;
     box-sizing: border-box;
-    animation: rotate 1.5s linear infinite;
+    animation: rotate 1.2s ease-out infinite;
   }
   @keyframes rotate {
     0% {

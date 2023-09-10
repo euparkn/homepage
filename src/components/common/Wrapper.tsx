@@ -31,6 +31,7 @@ const Container = styled.section<{
   border-right: 2px double #aaa;
   padding: 0 32px;
   margin: 0 12px 400px;
+  position: relative;
 `;
 
 export default Wrapper;

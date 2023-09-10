@@ -87,10 +87,3 @@ textarea {
 input {
   border: 1px solid;
 }
-
-html,
-body,
-#root {
-  width: 100%;
-  height: 100%;
-}

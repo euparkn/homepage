@@ -2,13 +2,15 @@ import { styled } from "styled-components";
 
 import Sticky from "components/common/Sticky";
 import Wrapper from "components/common/Wrapper";
+import Background from "components/Background";
 
 const NAME = process.env.REACT_APP_NAME;
 
 function MainContent() {
   return (
-    <Wrapper heightTimes={1.5}>
-      <Sticky heightTimes={1.5}>
+    <Wrapper heightTimes={2}>
+      <Background />
+      <Sticky heightTimes={2}>
         <Container>
           <Title>{NAME}</Title>
         </Container>
@@ -24,6 +26,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 const Title = styled.h1`

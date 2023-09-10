@@ -18,7 +18,6 @@ const Container = styled.footer`
   justify-content: center;
   align-items: center;
   height: 400px;
-  background-color: #eee;
   small {
     font-weight: 700;
     font-size: 0.85rem;
