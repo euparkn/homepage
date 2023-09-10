@@ -26,10 +26,7 @@ function Background() {
   return (
     <Bg>
       <Name />
-      <Name
-        strokeDasharray={screenHeight}
-        strokeDashoffset={screenHeight - scrollTop}
-      />
+      <Name strokeDasharray={screenHeight} strokeDashoffset={-scrollTop} />
     </Bg>
   );
 }
