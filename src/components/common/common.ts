@@ -1,23 +1,24 @@
 import { styled } from "styled-components";
 
 export const SectionTitle = styled.h3`
-  font-size: 1.5rem;
-  line-height: 1.75rem;
+  color: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.fontSize.title};
+  line-height: ${(props) => props.theme.lineHeight.title};
   font-weight: 700;
   margin-bottom: 0.5rem;
 `;
 
 export const SectionText = styled.p`
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #111;
+  color: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.fontSize.default};
+  line-height: ${(props) => props.theme.lineHeight.default};
 `;
 
 export const SectionLink = styled.a`
-  font-size: 1rem;
-  line-height: 1.25rem;
+  color: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.fontSize.default};
+  line-height: ${(props) => props.theme.lineHeight.default};
   padding-right: 8px;
-  color: #111;
   text-decoration: none;
   &:hover {
     text-decoration: underline;

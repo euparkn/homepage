@@ -20,7 +20,7 @@ const Container = styled.footer`
   height: 400px;
   small {
     font-weight: 700;
-    font-size: 0.85rem;
-    color: #777;
+    color: ${(props) => props.theme.fontSub};
+    font-size: ${(props) => props.theme.fontSize.small};
   }
 `;

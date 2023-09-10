@@ -15,7 +15,7 @@ const Spinner = styled.div`
     display: block;
     width: 42px;
     height: 42px;
-    border: 6px solid #111;
+    border: 6px solid ${(props) => props.theme.font};
     border-right-color: transparent;
     border-radius: 50%;
     box-sizing: border-box;

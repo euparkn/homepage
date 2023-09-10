@@ -18,8 +18,6 @@ function ObservedItem({ children }: { children?: ReactNode }) {
   );
 }
 
-const ObservedBox = styled.div`
-  background-color: #aaa;
-`;
+const ObservedBox = styled.div``;
 
 export default ObservedItem;

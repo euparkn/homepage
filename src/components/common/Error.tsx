@@ -18,13 +18,14 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   h3 {
-    font-size: 2rem;
+    color: ${(props) => props.theme.font};
+    font-size: ${(props) => props.theme.fontSize.title};
     font-weight: 700;
-    color: #333;
   }
   p {
     margin-top: 8px;
-    color: #777;
+    color: ${(props) => props.theme.fontSub};
+    font-size: ${(props) => props.theme.fontSize.default};
   }
 `;
 

@@ -34,7 +34,8 @@ const Title = styled.h1`
   height: 50px;
   line-height: 4rem;
   text-align: center;
-  font-size: 3.5rem;
+  color: ${(props) => props.theme.font};
+  font-size: ${(props) => props.theme.fontSize.mainTitle};
   font-weight: 700;
 `;
 

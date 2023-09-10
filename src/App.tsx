@@ -1,18 +1,25 @@
-import { styled } from "styled-components";
+import { useState } from "react";
+import { ThemeProvider, styled } from "styled-components";
+
+import { dark, light } from "assets/styles/theme";
 
 import MainContent from "pages/MainContent";
 import AboutContent from "pages/AboutContent";
 import PostContent from "pages/PostContent";
+
 import Footer from "components/footer/Footer";
 
 function App() {
+  const [mode, setMode] = useState("dark");
   return (
-    <Wrapper>
-      <MainContent />
-      <AboutContent />
-      <PostContent />
-      <Footer />
-    </Wrapper>
+    <ThemeProvider theme={mode === "light" ? light : dark}>
+      <Wrapper>
+        <MainContent />
+        <AboutContent />
+        <PostContent />
+        <Footer />
+      </Wrapper>
+    </ThemeProvider>
   );
 }
 

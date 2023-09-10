@@ -26,7 +26,11 @@ function Background() {
   return (
     <Bg>
       <Name />
-      <Name strokeDasharray={screenHeight} strokeDashoffset={-scrollTop} />
+      <Name strokeDasharray={screenHeight} strokeDashoffset={-scrollTop / 4} />
+      <Name
+        strokeDasharray={screenHeight}
+        strokeDashoffset={300 + -scrollTop / 2}
+      />
     </Bg>
   );
 }
@@ -42,6 +46,7 @@ const Bg = styled.div`
   justify-content: center;
   align-items: center;
   background: url(${bgImg}) center no-repeat;
+  filter: invert(${(props) => (props.theme.mode === "light" ? "0%" : "100%")});
   svg {
     position: absolute;
     width: 100%;

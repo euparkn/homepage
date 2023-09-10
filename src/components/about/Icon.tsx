@@ -32,9 +32,9 @@ const Box = styled.div<{ $color: string; $textColor: string }>`
   p {
     background-color: ${(props) => props.$color};
     color: ${(props) => props.$textColor};
+    font-size: ${(props) => props.theme.fontSize.small};
     padding: 0 8px;
     line-height: 1.5rem;
-    font-size: 0.85rem;
     font-weight: 700;
     transition: 0.2s;
     border-radius: 1px;

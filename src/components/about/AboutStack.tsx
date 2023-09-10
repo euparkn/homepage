@@ -1,6 +1,8 @@
-import { styled } from "styled-components";
+import { useContext } from "react";
+import { ThemeContext, styled } from "styled-components";
 
 import Icon from "components/about/Icon";
+import Error from "components/common/Error";
 
 import { ReactComponent as ReactIcon } from "assets/icons/react-#61DAFB.svg";
 import { ReactComponent as HtmlIcon } from "assets/icons/html5-#E34F26.svg";
@@ -15,24 +17,41 @@ import { ReactComponent as FigmaIcon } from "assets/icons/figma-#F24E1E.svg";
 import { ReactComponent as DockerIcon } from "assets/icons/docker-#2496ED.svg";
 
 function AboutStack() {
+  const theme = useContext(ThemeContext);
+
+  if (!theme) {
+    return <Error />;
+  }
+
+  const { font } = theme;
+
   return (
     <Stack>
       <Icon
-        src={<JsIcon />}
+        src={<JsIcon fill={font} />}
         text="JavaScript"
         textColor="#111"
         color="#F7DF1E"
       />
-      <Icon src={<TsIcon />} text="TypeScript" color="#3178C6" />
-      <Icon src={<ReactIcon />} text="React" textColor="#111" color="#61DAFB" />
-      <Icon src={<HtmlIcon />} text="HTML5" color="#E34F26" />
-      <Icon src={<CssIcon />} text="CSS3" color="#1572B6" />
-      <Icon src={<ScIcon />} text="Styled-Component" color="#DB7093" />
-      <Icon src={<SassIcon />} text="Sass" color="#CC6699" />
-      <Icon src={<UnityIcon />} text="Unity" color="#000000" />
-      <Icon src={<FigmaIcon />} text="Figma" color="#F24E1E" />
-      <Icon src={<GitIcon />} text="Git" color="#F05032" />
-      <Icon src={<DockerIcon />} text="Docker" color="#2496ED" />
+      <Icon src={<TsIcon fill={font} />} text="TypeScript" color="#3178C6" />
+      <Icon
+        src={<ReactIcon fill={font} />}
+        text="React"
+        textColor="#111"
+        color="#61DAFB"
+      />
+      <Icon src={<HtmlIcon fill={font} />} text="HTML5" color="#E34F26" />
+      <Icon src={<CssIcon fill={font} />} text="CSS3" color="#1572B6" />
+      <Icon
+        src={<ScIcon fill={font} />}
+        text="Styled-Component"
+        color="#DB7093"
+      />
+      <Icon src={<SassIcon fill={font} />} text="Sass" color="#CC6699" />
+      <Icon src={<UnityIcon fill={font} />} text="Unity" color="#000000" />
+      <Icon src={<FigmaIcon fill={font} />} text="Figma" color="#F24E1E" />
+      <Icon src={<GitIcon fill={font} />} text="Git" color="#F05032" />
+      <Icon src={<DockerIcon fill={font} />} text="Docker" color="#2496ED" />
     </Stack>
   );
 }
