@@ -4,17 +4,17 @@ import { ThemeContext, styled } from "styled-components";
 import Icon from "components/about/Icon";
 import Error from "components/common/Error";
 
-import { ReactComponent as ReactIcon } from "assets/icons/react-#61DAFB.svg";
-import { ReactComponent as HtmlIcon } from "assets/icons/html5-#E34F26.svg";
-import { ReactComponent as JsIcon } from "assets/icons/javascript-#F7DF1E.svg";
-import { ReactComponent as CssIcon } from "assets/icons/css3-#1572B6.svg";
-import { ReactComponent as TsIcon } from "assets/icons/typescript-#3178C6.svg";
-import { ReactComponent as UnityIcon } from "assets/icons/unity-#FFFFFF.svg";
-import { ReactComponent as ScIcon } from "assets/icons/styledcomponents-#DB7093.svg";
-import { ReactComponent as SassIcon } from "assets/icons/sass-#CC6699.svg";
-import { ReactComponent as GitIcon } from "assets/icons/git-#F05032.svg";
-import { ReactComponent as FigmaIcon } from "assets/icons/figma-#F24E1E.svg";
-import { ReactComponent as DockerIcon } from "assets/icons/docker-#2496ED.svg";
+import { ReactComponent as ReactIcon } from "assets/icons/react-61DAFB.svg";
+import { ReactComponent as HtmlIcon } from "assets/icons/html5-E34F26.svg";
+import { ReactComponent as JsIcon } from "assets/icons/javascript-F7DF1E.svg";
+import { ReactComponent as CssIcon } from "assets/icons/css3-1572B6.svg";
+import { ReactComponent as TsIcon } from "assets/icons/typescript-3178C6.svg";
+import { ReactComponent as UnityIcon } from "assets/icons/unity-FFFFFF.svg";
+import { ReactComponent as ScIcon } from "assets/icons/styledcomponents-DB7093.svg";
+import { ReactComponent as SassIcon } from "assets/icons/sass-CC6699.svg";
+import { ReactComponent as GitIcon } from "assets/icons/git-F05032.svg";
+import { ReactComponent as FigmaIcon } from "assets/icons/figma-F24E1E.svg";
+import { ReactComponent as DockerIcon } from "assets/icons/docker-2496ED.svg";
 
 function AboutStack() {
   const theme = useContext(ThemeContext);

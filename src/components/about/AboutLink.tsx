@@ -3,9 +3,9 @@ import { ThemeContext, styled } from "styled-components";
 
 import { SectionLink, SectionText } from "components/common/common";
 
-import { ReactComponent as GmailIcon } from "assets/icons/gmail-#EA4335.svg";
-import { ReactComponent as GithubIcon } from "assets/icons/github-#181717.svg";
-import { ReactComponent as BlogIcon } from "assets/icons/tistory-#000000.svg";
+import { ReactComponent as GmailIcon } from "assets/icons/gmail-EA4335.svg";
+import { ReactComponent as GithubIcon } from "assets/icons/github-181717.svg";
+import { ReactComponent as BlogIcon } from "assets/icons/tistory-000000.svg";
 import Error from "components/common/Error";
 
 const GITHUB_ID = process.env.REACT_APP_GITHUB_ID;
