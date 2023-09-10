@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import Sticky from "components/common/Sticky";
 import Wrapper from "components/common/Wrapper";
 import Background from "components/Background";
+import ObservedItem from "components/common/ObservedItem";
 
 const NAME = process.env.REACT_APP_NAME;
 
@@ -11,9 +12,11 @@ function MainContent() {
     <Wrapper heightTimes={2}>
       <Background />
       <Sticky heightTimes={2}>
-        <Container>
-          <Title>{NAME}</Title>
-        </Container>
+        <ObservedItem>
+          <Container>
+            <Title>{NAME}</Title>
+          </Container>
+        </ObservedItem>
       </Sticky>
     </Wrapper>
   );

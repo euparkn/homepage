@@ -5,19 +5,19 @@ import { useIntersectionObserver } from "hooks/useIntersectionObserver";
 
 function ObservedItem({ children }: { children?: ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
-  const { ratio } = useIntersectionObserver(ref, {
-    threshold: Array(10)
-      .fill(0)
-      .map((el, i) => i / 10),
-  });
+  const { isInView } = useIntersectionObserver(ref);
 
   return (
-    <ObservedBox ref={ref} style={{ opacity: ratio }}>
+    <ObservedBox ref={ref} $isInView={isInView}>
       {children}
     </ObservedBox>
   );
 }
 
-const ObservedBox = styled.div``;
+const ObservedBox = styled.div<{ $isInView: boolean }>`
+  height: 100%;
+  opacity: ${(props) => (props.$isInView ? 1 : 0)};
+  transition: 1.5s;
+`;
 
 export default ObservedItem;
