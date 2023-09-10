@@ -33,9 +33,7 @@ function PostList() {
   }
 
   if (!data || error) {
-    return (
-      <Error code={err.response?.status} text={err.response?.statusText} />
-    );
+    return <Error code={err.code} text={err.message} />;
   }
 
   const { posts } = data;

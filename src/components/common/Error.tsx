@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 
-function Error({ code, text }: { code?: number; text?: string }) {
+function Error({ code, text }: { code?: string; text?: string }) {
   return (
     <Container>
-      {!code || (!text && <h3>Error</h3>)}
+      {(!code || !text) && <h3>Error</h3>}
       <h3>{code}</h3>
       <p>{text}</p>
     </Container>

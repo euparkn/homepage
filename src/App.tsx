@@ -10,7 +10,7 @@ import PostContent from "pages/PostContent";
 import Footer from "components/footer/Footer";
 
 function App() {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("light");
   return (
     <ThemeProvider theme={mode === "light" ? light : dark}>
       <Wrapper>
