@@ -5,14 +5,11 @@ export const useIntersectionObserver = (
   options?: IntersectionObserverInit
 ) => {
   const [isInView, setIsInView] = useState(false);
-  const [ratio, setRatio] = useState(0);
 
   const callback = ([entry]: IntersectionObserverEntry[]) => {
     if (!entry || !entry.target) {
       return;
     }
-
-    setRatio(entry.intersectionRatio);
     setIsInView(entry.isIntersecting);
   };
 
@@ -27,5 +24,5 @@ export const useIntersectionObserver = (
     return () => observer.disconnect();
   }, [callback, elementRef]);
 
-  return { isInView, ratio };
+  return { isInView };
 };
