@@ -2,7 +2,7 @@ const fontSize = {
   small: "0.85rem",
   default: "1rem",
   title: "1.5rem",
-  mainTitle: "4rem",
+  mainTitle: "3rem",
 };
 
 const lineHeight = {

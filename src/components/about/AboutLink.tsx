@@ -26,7 +26,7 @@ function AboutLink() {
   const { font } = theme;
 
   return (
-    <ul>
+    <Container>
       <InfoBox>
         <GithubIcon fill={font} />
         <SectionLink href={GITHUB_URL} target="blank">
@@ -43,16 +43,20 @@ function AboutLink() {
           {BLOG}
         </SectionLink>
       </InfoBox>
-    </ul>
+    </Container>
   );
 }
+
+const Container = styled.ul`
+  margin-top: 3rem;
+`;
 
 const InfoBox = styled.li`
   height: 1.5rem;
   display: flex;
   align-items: center;
   svg {
-    width: 16px;
+    min-width: 16px;
     height: 16px;
     margin-right: 6px;
   }

@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 
-import { useScreenHeight } from "hooks/useScreenHeight";
+import { useResize } from "hooks/useResize";
 
 import { ReactComponent as Name } from "assets/images/name.svg";
+import { ReactComponent as NameVertical } from "assets/images/name_vertical.svg";
+
 import bgImg from "assets/images/bg_light.jpg";
 
 function Background() {
@@ -13,7 +15,7 @@ function Background() {
     setScrollTop(window.scrollY);
   };
 
-  const screenHeight = useScreenHeight();
+  const { screenHeight, isMobile } = useResize();
   // const screenHeight = document.body.scrollHeight;
 
   useEffect(() => {
@@ -25,15 +27,51 @@ function Background() {
 
   return (
     <Bg>
-      <Name />
-      <Name strokeDasharray={screenHeight} strokeDashoffset={-scrollTop / 4} />
-      <Name
-        strokeDasharray={screenHeight}
-        strokeDashoffset={300 + -scrollTop / 2}
-      />
+      {isMobile ? (
+        <SvgWrapper>
+          <NameVertical />
+          <NameVertical
+            strokeDasharray={screenHeight}
+            strokeDashoffset={-scrollTop / 4}
+          />
+          <NameVertical
+            strokeDasharray={screenHeight}
+            strokeDashoffset={300 + -scrollTop / 2}
+          />
+        </SvgWrapper>
+      ) : (
+        <SvgWrapper>
+          <Name />
+          <Name
+            strokeDasharray={screenHeight}
+            strokeDashoffset={-scrollTop / 4}
+          />
+          <Name
+            strokeDasharray={screenHeight}
+            strokeDashoffset={300 + -scrollTop / 2}
+          />
+        </SvgWrapper>
+      )}
     </Bg>
   );
 }
+
+const SvgWrapper = styled.div`
+  width: 130%;
+  height: 100%;
+  position: absolute;
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    &:first-child {
+      path {
+        stroke: #aaa;
+      }
+    }
+  }
+`;
 
 const Bg = styled.div`
   width: 100%;
@@ -46,19 +84,8 @@ const Bg = styled.div`
   justify-content: center;
   align-items: center;
   background: url(${bgImg}) center no-repeat;
+  background-size: cover;
   filter: invert(${(props) => (props.theme.mode === "light" ? "0%" : "100%")});
-  svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: scale(125%);
-    opacity: 0.1;
-    &:first-child {
-      path {
-        stroke: #aaa;
-      }
-    }
-  }
 `;
 
 export default Background;

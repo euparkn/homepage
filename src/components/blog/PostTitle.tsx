@@ -1,16 +1,22 @@
+import { styled } from "styled-components";
+
 import { SectionLink, SectionTitle } from "components/common/common";
 
 const BLOG_URL = process.env.REACT_APP_BLOG_URL;
 
 function PostTitle() {
   return (
-    <div>
+    <Container>
       <SectionTitle>Post</SectionTitle>
       <SectionLink href={BLOG_URL} target="_blank">
         more...
       </SectionLink>
-    </div>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  margin-bottom: 2rem;
+`;
 
 export default PostTitle;

@@ -57,6 +57,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export default PostList;

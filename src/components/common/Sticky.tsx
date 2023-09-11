@@ -29,6 +29,10 @@ export const StickyContainer = styled.article<{
   position: sticky;
   top: calc(50% - ${(props) => (props.$height / 2) * props.$heightTimes}%);
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    height: 45%;
+    top: calc(50% - ${(props) => 22.5 * props.$heightTimes}%);
+  }
 `;
 
 export default Sticky;
