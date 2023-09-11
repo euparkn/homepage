@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { styled } from "styled-components";
 
-import { useScreenHeight } from "hooks/useScreenHeight";
+import { useResize } from "hooks/useResize";
 
 function Wrapper({
   heightTimes = 1,
@@ -10,7 +10,7 @@ function Wrapper({
   heightTimes?: number;
   children: ReactNode;
 }) {
-  const screenHeight = useScreenHeight();
+  const { screenHeight } = useResize();
 
   return (
     <Container $screenHeight={screenHeight} $heightTimes={heightTimes}>
@@ -30,8 +30,12 @@ const Container = styled.section<{
   border-left: 3px double ${(props) => props.theme.stroke};
   border-right: 3px double ${(props) => props.theme.stroke};
   padding: 0 32px;
-  margin: 0 12px 400px;
+  margin: 0 4px 400px;
   position: relative;
+  @media screen and (max-width: 768px) {
+    padding: 0 12px;
+    flex-direction: column;
+  }
 `;
 
 export default Wrapper;
