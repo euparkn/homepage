@@ -9,6 +9,7 @@ import MainContent from "pages/MainContent";
 import AboutContent from "pages/AboutContent";
 import PostContent from "pages/PostContent";
 
+import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <ThemeProvider theme={darkMode ? dark : light}>
+      <Header />
       <Wrapper>
         <MainContent />
         <AboutContent />

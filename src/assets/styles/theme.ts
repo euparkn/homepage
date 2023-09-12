@@ -17,14 +17,14 @@ export const light = {
   background: "#eee",
   font: "#333",
   fontSub: "#888",
-  stroke: "#aaa",
+  stroke: "#bfbfbf",
   fontSize,
   lineHeight,
 };
 
 export const dark = {
   mode: "dark",
-  background: "#eee",
+  background: "#111",
   font: "#ccc",
   fontSub: "#555",
   stroke: "#333",
