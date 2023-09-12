@@ -1,11 +1,9 @@
 import { styled } from "styled-components";
 
-const NAME = process.env.REACT_APP_NAME;
-
 function Footer() {
   return (
     <Container>
-      <small>© 2023 {NAME}</small>
+      <small>© 2023 Eunji Park</small>
     </Container>
   );
 }
