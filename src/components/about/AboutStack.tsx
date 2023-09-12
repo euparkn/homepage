@@ -60,11 +60,11 @@ const Stack = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
   gap: 8px;
+  overflow: auto;
 `;
 
 export default AboutStack;

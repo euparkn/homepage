@@ -21,7 +21,7 @@ function Icon({
 }
 
 const Box = styled.div<{ $color: string; $textColor: string }>`
-  height: 32px;
+  min-height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
