@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useRecoilValue } from "recoil";
 import { ThemeProvider, styled } from "styled-components";
 
 import { dark, light } from "assets/styles/theme";
+
+import { optionAtom } from "store";
 
 import MainContent from "pages/MainContent";
 import AboutContent from "pages/AboutContent";
@@ -10,9 +12,11 @@ import PostContent from "pages/PostContent";
 import Footer from "components/footer/Footer";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const option = useRecoilValue(optionAtom);
+  const { darkMode } = option;
+
   return (
-    <ThemeProvider theme={mode === "light" ? light : dark}>
+    <ThemeProvider theme={darkMode ? dark : light}>
       <Wrapper>
         <MainContent />
         <AboutContent />
