@@ -15,8 +15,12 @@ function Background() {
     setScrollTop(window.scrollY);
   };
 
-  const { screenHeight, isMobile } = useResize();
-  // const screenHeight = document.body.scrollHeight;
+  const { isMobile } = useResize();
+  const screenHeight = document.body.scrollHeight - window.innerHeight;
+
+  const length = screenHeight / 4;
+  const move = length - scrollTop / 4;
+  const move2 = length - scrollTop / 4 - 1000;
 
   useEffect(() => {
     window.addEventListener("scroll", scroll);
@@ -30,26 +34,14 @@ function Background() {
       {isMobile ? (
         <SvgWrapper>
           <NameVertical />
-          <NameVertical
-            strokeDasharray={screenHeight}
-            strokeDashoffset={-scrollTop / 4}
-          />
-          <NameVertical
-            strokeDasharray={screenHeight}
-            strokeDashoffset={300 + -scrollTop / 2}
-          />
+          <NameVertical strokeDasharray={length} strokeDashoffset={move} />
+          <NameVertical strokeDasharray={length} strokeDashoffset={move2} />
         </SvgWrapper>
       ) : (
         <SvgWrapper>
           <Name />
-          <Name
-            strokeDasharray={screenHeight}
-            strokeDashoffset={-scrollTop / 4}
-          />
-          <Name
-            strokeDasharray={screenHeight}
-            strokeDashoffset={300 + -scrollTop / 2}
-          />
+          <Name strokeDasharray={length} strokeDashoffset={move} />
+          <Name strokeDasharray={length} strokeDashoffset={move2} />
         </SvgWrapper>
       )}
     </Bg>
