@@ -6,12 +6,12 @@ export const useResize = () => {
     () => window.innerHeight
   );
   const [isMobile, setIsMobile] = useState(
-    () => matchMedia("screen and (max-width: 768px)").matches
+    () => matchMedia("screen and (max-width: 540px)").matches
   );
 
   const resize = () => {
     setScreenHeight(window.innerHeight);
-    setIsMobile(matchMedia("screen and (max-width: 768px)").matches);
+    setIsMobile(matchMedia("screen and (max-width: 540px)").matches);
   };
 
   useEffect(() => {

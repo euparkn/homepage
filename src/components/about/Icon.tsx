@@ -51,7 +51,6 @@ const Box = styled.div<{ $color: string; $textColor: string }>`
     }
   }
   @media screen and (max-width: 768px) {
-    overflow: hidden;
     &:hover {
       svg {
         display: none;
@@ -59,6 +58,16 @@ const Box = styled.div<{ $color: string; $textColor: string }>`
       p {
         margin: 0;
       }
+    }
+  }
+  @media screen and (max-height: 564px) {
+    min-height: 20px;
+    svg {
+      display: none;
+    }
+    p {
+      display: block;
+      margin: 0;
     }
   }
 `;

@@ -64,7 +64,11 @@ const Stack = styled.div`
   align-items: flex-end;
   justify-content: center;
   gap: 8px;
-  overflow: auto;
+  overflow: hidden;
+  @media screen and (max-height: 564px) {
+    gap: 4px;
+    overflow: auto;
+  }
 `;
 
 export default AboutStack;
