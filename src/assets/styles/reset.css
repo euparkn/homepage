@@ -90,3 +90,9 @@ textarea {
 input {
   border: 1px solid;
 }
+
+html,
+body,
+#root {
+  height: 100%;
+}

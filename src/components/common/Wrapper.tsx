@@ -1,8 +1,6 @@
 import { ReactNode } from "react";
 import { styled } from "styled-components";
 
-import { useResize } from "hooks/useResize";
-
 function Wrapper({
   heightTimes = 1,
   children,
@@ -10,20 +8,13 @@ function Wrapper({
   heightTimes?: number;
   children: ReactNode;
 }) {
-  const { screenHeight } = useResize();
-
-  return (
-    <Container $screenHeight={screenHeight} $heightTimes={heightTimes}>
-      {children}
-    </Container>
-  );
+  return <Container $heightTimes={heightTimes}>{children}</Container>;
 }
 
 const Container = styled.section<{
-  $screenHeight: number;
   $heightTimes: number;
 }>`
-  height: ${(props) => props.$screenHeight * props.$heightTimes}px;
+  height: calc(${(props) => 100 * props.$heightTimes}%);
   min-height: 300px;
   box-sizing: border-box;
   display: flex;
