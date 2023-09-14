@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 
 import { ReactComponent as Name } from "assets/images/name.svg";
@@ -6,30 +5,16 @@ import { ReactComponent as NameVertical } from "assets/images/name_vertical.svg"
 import bgImg from "assets/images/bg_light.jpg";
 
 import { useResize } from "hooks/useResize";
+import { useScroll } from "hooks/useScroll";
 
 function Background() {
-  const [scrollTop, setScrollTop] = useState<number>(() => window.scrollY);
   const { isMobile } = useResize();
-
-  const scroll = () => {
-    if (window.scrollY < 0) {
-      return;
-    }
-    setScrollTop(window.scrollY);
-  };
+  const { scrollTop, scrollHeight } = useScroll();
 
   const length = window.outerHeight;
-  const scrollHeight = document.body.scrollHeight - window.innerHeight;
 
   const line1 = scrollHeight - scrollTop;
   const line2 = scrollHeight - scrollTop + 400;
-
-  useEffect(() => {
-    window.addEventListener("scroll", scroll);
-    return () => {
-      window.removeEventListener("scroll", scroll);
-    };
-  }, []);
 
   return (
     <Bg>
