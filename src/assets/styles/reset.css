@@ -49,9 +49,6 @@ html {
   letter-spacing: -0.01rem;
   font-weight: 500;
   @media screen and (max-width: 768px) {
-    font-size: 14px;
-  }
-  @media screen and (max-width: 480px) {
     font-size: 13px;
     font-weight: 400;
   }

@@ -5,7 +5,7 @@ export const SectionTitle = styled.h3`
   font-size: ${(props) => props.theme.fontSize.title};
   line-height: ${(props) => props.theme.lineHeight.title};
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 `;
 
 export const SectionText = styled.p`

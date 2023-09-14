@@ -24,7 +24,7 @@ const List = styled.li`
 const Link = styled.a`
   width: 100%;
   display: block;
-  padding: 12px 0;
+  padding: 0.5rem 0;
   font-size: ${(props) => props.theme.fontSize.default};
   color: ${(props) => props.theme.font};
   line-height: ${(props) => props.theme.lineHeight.default};
