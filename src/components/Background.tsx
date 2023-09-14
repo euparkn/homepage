@@ -1,26 +1,27 @@
 import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 
-import { useResize } from "hooks/useResize";
-
 import { ReactComponent as Name } from "assets/images/name.svg";
 import { ReactComponent as NameVertical } from "assets/images/name_vertical.svg";
-
 import bgImg from "assets/images/bg_light.jpg";
+
+import { Size } from "types/type";
+import { useResize } from "hooks/useResize";
 
 function Background() {
   const [scrollTop, setScrollTop] = useState<number>(() => window.scrollY);
+  const { outer, isMobile } = useResize();
 
   const scroll = () => {
+    if (window.scrollY < 0) {
+      return;
+    }
     setScrollTop(window.scrollY);
   };
 
-  const { isMobile } = useResize();
-  const screenHeight = document.body.scrollHeight - window.innerHeight;
-
-  const length = screenHeight / 4;
-  const move = length - scrollTop / 4;
-  const move2 = length - scrollTop / 4 - 1000;
+  const length = outer.height;
+  const move = length - scrollTop;
+  const move2 = length - scrollTop - 200;
 
   useEffect(() => {
     window.addEventListener("scroll", scroll);
@@ -32,13 +33,13 @@ function Background() {
   return (
     <Bg>
       {isMobile ? (
-        <SvgWrapper>
+        <SvgWrapper $outer={outer}>
           <NameVertical />
           <NameVertical strokeDasharray={length} strokeDashoffset={move} />
           <NameVertical strokeDasharray={length} strokeDashoffset={move2} />
         </SvgWrapper>
       ) : (
-        <SvgWrapper>
+        <SvgWrapper $outer={outer}>
           <Name />
           <Name strokeDasharray={length} strokeDashoffset={move} />
           <Name strokeDasharray={length} strokeDashoffset={move2} />
@@ -48,9 +49,9 @@ function Background() {
   );
 }
 
-const SvgWrapper = styled.div`
-  width: 130%;
-  height: 100%;
+const SvgWrapper = styled.div<{ $outer: Size }>`
+  width: ${(props) => props.$outer.width * 1.3}px;
+  height: ${(props) => props.$outer.height * 1.1}px;
   position: absolute;
   svg {
     position: absolute;

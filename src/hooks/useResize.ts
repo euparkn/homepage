@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
+import { Size } from "types/type";
 import { debounce } from "utils/debounce";
 
 export const useResize = () => {
-  const [screenHeight, setScreenHeight] = useState<number>(
-    () => window.innerHeight
-  );
+  const [outer, setOuter] = useState<Size>({
+    width: window.outerWidth,
+    height: window.outerHeight,
+  });
   const [isMobile, setIsMobile] = useState(
     () => matchMedia("screen and (max-width: 540px)").matches
   );
 
   const resize = () => {
-    setScreenHeight(window.innerHeight);
+    setOuter({ width: window.outerWidth, height: window.outerHeight });
     setIsMobile(matchMedia("screen and (max-width: 540px)").matches);
   };
 
@@ -21,5 +23,5 @@ export const useResize = () => {
     };
   }, []);
 
-  return { screenHeight, isMobile };
+  return { outer, isMobile };
 };

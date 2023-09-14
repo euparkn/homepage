@@ -24,3 +24,8 @@ export interface IPost {
   trackbacks: string;
   visibility: string;
 }
+
+export interface Size {
+  width: number;
+  height: number;
+}
