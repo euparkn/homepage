@@ -5,12 +5,11 @@ import { ReactComponent as Name } from "assets/images/name.svg";
 import { ReactComponent as NameVertical } from "assets/images/name_vertical.svg";
 import bgImg from "assets/images/bg_light.jpg";
 
-import { Size } from "types/type";
 import { useResize } from "hooks/useResize";
 
 function Background() {
   const [scrollTop, setScrollTop] = useState<number>(() => window.scrollY);
-  const { outer, isMobile } = useResize();
+  const { isMobile } = useResize();
 
   const scroll = () => {
     if (window.scrollY < 0) {
@@ -19,9 +18,11 @@ function Background() {
     setScrollTop(window.scrollY);
   };
 
-  const length = outer.height;
-  const move = length - scrollTop;
-  const move2 = length - scrollTop - 200;
+  const length = window.outerHeight;
+  const scrollHeight = document.body.scrollHeight - window.innerHeight;
+
+  const line1 = scrollHeight - scrollTop;
+  const line2 = scrollHeight - scrollTop + 400;
 
   useEffect(() => {
     window.addEventListener("scroll", scroll);
@@ -33,25 +34,25 @@ function Background() {
   return (
     <Bg>
       {isMobile ? (
-        <SvgWrapper $outer={outer}>
+        <SvgWrapper>
           <NameVertical />
-          <NameVertical strokeDasharray={length} strokeDashoffset={move} />
-          <NameVertical strokeDasharray={length} strokeDashoffset={move2} />
+          <NameVertical strokeDasharray={length} strokeDashoffset={line1} />
+          <NameVertical strokeDasharray={length} strokeDashoffset={line2} />
         </SvgWrapper>
       ) : (
-        <SvgWrapper $outer={outer}>
+        <SvgWrapper>
           <Name />
-          <Name strokeDasharray={length} strokeDashoffset={move} />
-          <Name strokeDasharray={length} strokeDashoffset={move2} />
+          <Name strokeDasharray={length} strokeDashoffset={line1} />
+          <Name strokeDasharray={length} strokeDashoffset={line2} />
         </SvgWrapper>
       )}
     </Bg>
   );
 }
 
-const SvgWrapper = styled.div<{ $outer: Size }>`
-  width: ${(props) => props.$outer.width * 1.3}px;
-  height: ${(props) => props.$outer.height * 1.1}px;
+const SvgWrapper = styled.div`
+  width: 120vw;
+  height: 110vh;
   position: absolute;
   svg {
     position: absolute;

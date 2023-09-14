@@ -18,6 +18,7 @@ export const useResize = () => {
 
   useEffect(() => {
     window.addEventListener("resize", debounce(resize));
+    window.dispatchEvent(new Event("resize"));
     return () => {
       window.removeEventListener("resize", debounce(resize));
     };
