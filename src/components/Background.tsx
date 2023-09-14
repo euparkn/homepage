@@ -13,8 +13,8 @@ function Background() {
 
   const length = window.outerHeight;
 
-  const line1 = scrollHeight - scrollTop;
-  const line2 = scrollHeight - scrollTop + 400;
+  const line1 = scrollHeight - scrollTop / 5;
+  const line2 = scrollHeight - scrollTop / 5 + 500;
 
   return (
     <Bg>
@@ -36,7 +36,7 @@ function Background() {
 }
 
 const SvgWrapper = styled.div`
-  width: 120vw;
+  width: 130vw;
   height: 110vh;
   position: absolute;
   svg {

@@ -21,7 +21,7 @@ const Container = styled.section<{
   border-left: 3px double ${(props) => props.theme.stroke};
   border-right: 3px double ${(props) => props.theme.stroke};
   padding: 0 32px;
-  margin: 0 4px 400px;
+  margin: 0 4px 300px;
   position: relative;
   @media screen and (max-width: 768px) {
     padding: 0 12px;

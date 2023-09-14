@@ -17,7 +17,7 @@ function ObservedItem({ children }: { children?: ReactNode }) {
 const ObservedBox = styled.div<{ $isInView: boolean }>`
   height: 100%;
   opacity: ${(props) => (props.$isInView ? 1 : 0)};
-  transition: 2s ease-in-out;
+  transition: 1.5s;
 `;
 
 export default ObservedItem;

@@ -7,7 +7,7 @@ import ObservedItem from "components/common/ObservedItem";
 function AboutContent() {
   return (
     <Wrapper heightTimes={1.5}>
-      <Sticky height={30} heightTimes={1.5}>
+      <Sticky height={30} heightTimes={1.5} style={{ zIndex: 10 }}>
         <ObservedItem>
           <AboutInfo />
         </ObservedItem>

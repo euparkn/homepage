@@ -1,19 +1,21 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 import { styled } from "styled-components";
 
 const minHeight = 30;
 
 function Sticky({
+  style,
   height = minHeight,
   heightTimes = 1,
   children,
 }: {
+  style?: CSSProperties;
   height?: number;
   heightTimes?: number;
   children: ReactNode;
 }) {
   return (
-    <StickyContainer $height={height} $heightTimes={heightTimes}>
+    <StickyContainer $height={height} $heightTimes={heightTimes} style={style}>
       {children}
     </StickyContainer>
   );
