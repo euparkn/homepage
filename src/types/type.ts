@@ -1,20 +1,20 @@
 export type PostDataDTO = {
   tistory: {
     status: string;
-    item: IItem;
+    item: Item;
   };
 };
 
-export interface IItem {
+export interface Item {
   count: string;
   page: string;
-  posts: IPost[];
+  posts: Post[];
   secondaryUrl: string;
   totalCount: string;
   url: string;
 }
 
-export interface IPost {
+export interface Post {
   categoryId: string;
   comments: string;
   date: string;

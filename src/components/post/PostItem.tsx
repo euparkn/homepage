@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import { IPost } from "types/type";
+import { Post } from "types/type";
 
-function PostItem({ info }: { info: IPost }) {
+function PostItem({ info }: { info: Post }) {
   return (
     <List>
       <Link href={info.postUrl} target="_blank">
