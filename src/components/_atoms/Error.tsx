@@ -17,6 +17,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid ${(props) => props.theme.stroke};
   h3 {
     color: ${(props) => props.theme.font};
     font-size: ${(props) => props.theme.fontSize.title};

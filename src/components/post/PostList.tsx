@@ -40,29 +40,15 @@ function PostList() {
 
   return (
     <Container>
-      <PostTitle />
-      <ul>
-        {posts.map((post) => (
-          <PostItem key={post.id} info={post} />
-        ))}
-      </ul>
+      {posts.map((post) => (
+        <PostItem key={post.id} info={post} />
+      ))}
     </Container>
   );
 }
 
-const Container = styled.div`
-  width: 100%;
-  max-width: 500px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  ul {
-    overflow: auto;
-  }
-  @media screen and (max-width: 768px) {
-    justify-content: center;
-  }
+const Container = styled.ul`
+  overflow: auto;
 `;
 
 export default PostList;
