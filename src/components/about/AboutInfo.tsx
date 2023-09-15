@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 import AboutLink from "components/about/AboutLink";
-import { SectionText, SectionTitle } from "components/common/common";
+import { SectionText, SectionTitle } from "components/_atoms/atoms";
 
 const NAME = process.env.REACT_APP_NAME;
 

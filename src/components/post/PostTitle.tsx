@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { SectionLink, SectionTitle } from "components/common/common";
+import { SectionLink, SectionTitle } from "components/_atoms/atoms";
 
 const BLOG_URL = process.env.REACT_APP_BLOG_URL;
 

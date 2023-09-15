@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 
-import Sticky from "components/common/Sticky";
-import Wrapper from "components/common/Wrapper";
-import Background from "components/Background";
-import ObservedItem from "components/common/ObservedItem";
+import Sticky from "components/container/Sticky";
+import Wrapper from "components/container/Wrapper";
+import ObservedItem from "components/container/ObservedItem";
+import Background from "components/main/MainBackground";
 
 const NAME = process.env.REACT_APP_NAME;
 

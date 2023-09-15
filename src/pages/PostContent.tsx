@@ -1,7 +1,7 @@
-import PostList from "components/blog/PostList";
-import ObservedItem from "components/common/ObservedItem";
-import Sticky from "components/common/Sticky";
-import Wrapper from "components/common/Wrapper";
+import PostList from "components/post/PostList";
+import ObservedItem from "components/container/ObservedItem";
+import Sticky from "components/container/Sticky";
+import Wrapper from "components/container/Wrapper";
 
 function PostContent() {
   return (

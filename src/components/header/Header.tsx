@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import ModeSwitch from "components/header/ModeSwitch";
+import ModeSwitch from "components/_atoms/ModeSwitch";
 
 function Header() {
   return (

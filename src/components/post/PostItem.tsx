@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { IPost } from "types/type";
 
-function Post({ info }: { info: IPost }) {
+function PostItem({ info }: { info: IPost }) {
   return (
     <List>
       <Link href={info.postUrl} target="_blank">
@@ -45,4 +45,4 @@ const Date = styled.span`
   color: ${(props) => props.theme.fontSub};
 `;
 
-export default Post;
+export default PostItem;

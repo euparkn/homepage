@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { ThemeContext, styled } from "styled-components";
 
-import { SectionLink, SectionText } from "components/common/common";
+import { SectionLink, SectionText } from "components/_atoms/atoms";
 
 import { ReactComponent as GmailIcon } from "assets/icons/gmail-EA4335.svg";
 import { ReactComponent as GithubIcon } from "assets/icons/github-181717.svg";
 import { ReactComponent as BlogIcon } from "assets/icons/tistory-000000.svg";
-import Error from "components/common/Error";
+import Error from "components/_atoms/Error";
 
 const GITHUB_ID = process.env.REACT_APP_GITHUB_ID;
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;

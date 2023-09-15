@@ -7,10 +7,10 @@ import { styled } from "styled-components";
 import { PostDataDTO } from "types/type";
 import { getPostList } from "api/api";
 
-import Loading from "components/common/Loading";
-import Error from "components/common/Error";
-import Post from "components/blog/Post";
-import PostTitle from "components/blog/PostTitle";
+import Loading from "components/_atoms/Loading";
+import Error from "components/_atoms/Error";
+import PostItem from "components/post/PostItem";
+import PostTitle from "components/post/PostTitle";
 
 function PostList() {
   const [searchOption] = useState({ page: "1", count: "5" });
@@ -43,7 +43,7 @@ function PostList() {
       <PostTitle />
       <ul>
         {posts.map((post) => (
-          <Post key={post.id} info={post} />
+          <PostItem key={post.id} info={post} />
         ))}
       </ul>
     </Container>

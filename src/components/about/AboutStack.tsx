@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext, styled } from "styled-components";
 
-import Icon from "components/about/Icon";
-import Error from "components/common/Error";
+import Icon from "components/_atoms/Icon";
+import Error from "components/_atoms/Error";
 
 import { ReactComponent as ReactIcon } from "assets/icons/react-61DAFB.svg";
 import { ReactComponent as HtmlIcon } from "assets/icons/html5-E34F26.svg";

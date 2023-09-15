@@ -1,8 +1,8 @@
-import Sticky from "components/common/Sticky";
-import Wrapper from "components/common/Wrapper";
+import Sticky from "components/container/Sticky";
+import Wrapper from "components/container/Wrapper";
 import AboutStack from "components/about/AboutStack";
 import AboutInfo from "components/about/AboutInfo";
-import ObservedItem from "components/common/ObservedItem";
+import ObservedItem from "components/container/ObservedItem";
 
 function AboutContent() {
   return (
