@@ -10,3 +10,10 @@ export const API = axios.create({
     "Access-Control-Allow-Origin": "*",
   },
 });
+
+export const MOCK_API = axios.create({
+  headers: {
+    "Content-Type": `application/json`,
+    "Access-Control-Allow-Origin": "*",
+  },
+});

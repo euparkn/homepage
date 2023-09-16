@@ -1,4 +1,4 @@
-import { API } from "api/apiConfig";
+import { API, MOCK_API } from "api/apiConfig";
 
 const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN;
 const BLOG_URL = process.env.REACT_APP_BLOG_URL;
@@ -19,5 +19,10 @@ export const getPostList = async ({
       count,
     },
   });
+  return response.data;
+};
+
+export const getProjectList = async () => {
+  const response = await MOCK_API.get("/mock/projectList.json");
   return response.data;
 };
