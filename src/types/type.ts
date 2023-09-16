@@ -29,3 +29,12 @@ export interface Size {
   width: number;
   height: number;
 }
+
+export type Project = {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  imgPath: string;
+  url: string;
+};

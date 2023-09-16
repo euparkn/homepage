@@ -8,6 +8,7 @@ import { optionAtom } from "store";
 import MainContent from "pages/MainContent";
 import AboutContent from "pages/AboutContent";
 import PostContent from "pages/PostContent";
+import ProjectContent from "pages/ProjectContent";
 
 import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
@@ -22,6 +23,7 @@ function App() {
       <Wrapper>
         <MainContent />
         <AboutContent />
+        <ProjectContent />
         <PostContent />
         <Footer />
       </Wrapper>
