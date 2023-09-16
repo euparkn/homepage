@@ -1,17 +1,19 @@
 import { styled } from "styled-components";
 
+import { SectionText } from "components/_atoms/atoms";
+import SectionInfo from "components/_molecules/SectionInfo";
 import AboutLink from "components/about/AboutLink";
-import { SectionText, SectionTitle } from "components/_atoms/atoms";
 
 const NAME = process.env.REACT_APP_NAME;
 
-function AboutInfo() {
+function About() {
   return (
     <Container>
-      <SectionTitle>Hi, I&apos;m {NAME}.</SectionTitle>
-      <SectionText>
-        I&apos;m a Front-end developer who loves design and art.
-      </SectionText>
+      <SectionInfo title={`Hi, I'm ${NAME}.`}>
+        <SectionText>
+          I&apos;m a Front-end developer who loves design and art.
+        </SectionText>
+      </SectionInfo>
       <AboutLink />
     </Container>
   );
@@ -26,4 +28,4 @@ const Container = styled.div`
     justify-content: center;
   }
 `;
-export default AboutInfo;
+export default About;
