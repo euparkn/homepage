@@ -18,6 +18,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid ${(props) => props.theme.stroke};
+  box-sizing: border-box;
   h3 {
     color: ${(props) => props.theme.font};
     font-size: ${(props) => props.theme.fontSize.title};
