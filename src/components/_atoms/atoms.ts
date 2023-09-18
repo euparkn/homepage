@@ -24,3 +24,10 @@ export const SectionLink = styled.a`
     text-decoration: underline;
   }
 `;
+
+export const Date = styled.span`
+  display: block;
+  font-size: ${(props) => props.theme.fontSize.small};
+  line-height: ${(props) => props.theme.lineHeight.small};
+  color: ${(props) => props.theme.fontSub};
+`;

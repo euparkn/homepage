@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 import { Post } from "types/type";
 
+import { Date } from "components/_atoms/atoms";
+
 function PostItem({ info }: { info: Post }) {
   return (
     <List>
@@ -36,13 +38,6 @@ const Link = styled.a`
   &:hover {
     border-width: 2px;
   }
-`;
-
-const Date = styled.span`
-  display: block;
-  font-size: ${(props) => props.theme.fontSize.small};
-  line-height: ${(props) => props.theme.lineHeight.small};
-  color: ${(props) => props.theme.fontSub};
 `;
 
 export default PostItem;
