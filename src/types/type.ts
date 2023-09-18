@@ -35,6 +35,6 @@ export type Project = {
   title: string;
   description: string;
   date: string;
-  imgPath: string;
+  image: string;
   url: string;
 };

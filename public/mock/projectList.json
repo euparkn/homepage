@@ -1,18 +1,18 @@
 [
   {
     "id": "2",
-    "title": "title2",
-    "description": "desc2",
-    "date": "2023.07",
-    "imgPath": "/",
-    "url": "/"
+    "title": "Portfolio Page",
+    "description": "React, TypeScript",
+    "date": "2023.09",
+    "image": "homepage",
+    "url": "https://eunjipark.netlify.app/"
   },
   {
     "id": "1",
-    "title": "title1",
-    "description": "desc1",
-    "date": "2023.05",
-    "imgPath": "/",
-    "url": "/"
+    "title": "Random Printer",
+    "description": "React, TypeScript",
+    "date": "2023.07",
+    "image": "printer",
+    "url": "https://randomprinter.netlify.app/"
   }
 ]
