@@ -22,7 +22,6 @@ function PostList() {
   } = useQuery<PostDataDTO>({
     queryKey: ["getPostList", searchOption],
     queryFn: () => getPostList(searchOption),
-    retry: 0,
   });
 
   const data = originData?.tistory.item;
