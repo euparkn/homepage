@@ -10,7 +10,6 @@ import { getPostList } from "api/api";
 import Loading from "components/_atoms/Loading";
 import Error from "components/_atoms/Error";
 import PostItem from "components/post/PostItem";
-import PostTitle from "components/post/PostTitle";
 
 function PostList() {
   const [searchOption] = useState({ page: "1", count: "5" });
