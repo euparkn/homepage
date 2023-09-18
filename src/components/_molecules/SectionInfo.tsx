@@ -8,7 +8,7 @@ function SectionInfo({
   children,
 }: {
   title: string;
-  children: ReactNode;
+  children?: ReactNode;
 }) {
   return (
     <Container>
