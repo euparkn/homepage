@@ -8,15 +8,14 @@ function ObservedItem({ children }: { children?: ReactNode }) {
   const { isInView } = useIntersectionObserver(ref);
 
   return (
-    <ObservedBox ref={ref} $isInView={isInView}>
+    <ObservedBox ref={ref} style={{ opacity: isInView ? 1 : 0 }}>
       {children}
     </ObservedBox>
   );
 }
 
-const ObservedBox = styled.div<{ $isInView: boolean }>`
+const ObservedBox = styled.div`
   height: 100%;
-  opacity: ${(props) => (props.$isInView ? 1 : 0)};
   transition: 1.5s;
 `;
 
