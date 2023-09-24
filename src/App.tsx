@@ -10,15 +10,18 @@ import AboutContent from "pages/AboutContent";
 import PostContent from "pages/PostContent";
 import ProjectContent from "pages/ProjectContent";
 
+import MouseEffect from "components/_atoms/MouseEffect";
 import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
 
 function App() {
   const option = useRecoilValue(optionAtom);
+
   const { darkMode } = option;
 
   return (
     <ThemeProvider theme={darkMode ? dark : light}>
+      <MouseEffect />
       <Header />
       <Wrapper>
         <MainContent />
