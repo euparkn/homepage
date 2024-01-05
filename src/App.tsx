@@ -21,7 +21,7 @@ function App() {
 
   return (
     <ThemeProvider theme={darkMode ? dark : light}>
-      <MouseEffect />
+      {/* <MouseEffect /> */}
       <Header />
       <Wrapper>
         <MainContent />
