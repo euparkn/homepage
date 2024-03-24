@@ -4,7 +4,7 @@
 
 <img src='https://img.shields.io/badge/React-61DAFB?logo=react&style=flat-square&logoColor=000'/> <img src='https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&style=flat-square&logoColor=fff'/> <img src='https://img.shields.io/badge/styledcomponents-DB7093?logo=styledcomponents&style=flat-square&logoColor=fff'/>
 
-This is my portfolio website built with React. I used Tistory API to get my blog posts.
+This is my portfolio website built with React.
 
 This website supports dark mode.
 
