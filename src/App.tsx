@@ -26,7 +26,7 @@ function App() {
         <MainContent />
         <AboutContent />
         <ProjectContent />
-        <PostContent />
+        {/* <PostContent /> - 티스토리 Open API 종료로 인해 숨김 */}
         <Footer />
       </Wrapper>
     </ThemeProvider>
